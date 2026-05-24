@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2B1B3D;
+  --color-accent: #8A4FFF;
+  --color-light: #FAF8FF;
+  
+  --color-pastel-lavender: #DCC6FF;
+  --color-pastel-pink: #FFD6E8;
+  --color-pastel-blue: #D6F0FF;
+  --color-pastel-green: #D8F3DC;
+  --color-pastel-peach: #FFE5B4;
+  
+  --font-heading: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  --shadow-pastel: 0 10px 30px -5px rgba(138, 79, 255, 0.15);
+  --shadow-pastel-blue-glow: 0 10px 30px -5px rgba(214, 240, 255, 0.5);
+  --shadow-pastel-pink-glow: 0 10px 30px -5px rgba(255, 214, 232, 0.5);
+  --shadow-pastel-lavender-glow: 0 10px 30px -5px rgba(220, 198, 255, 0.5);
+}
+
+body {
+  font-family: var(--font-sans);
+  background: linear-gradient(135deg, #FFFDF9 0%, #FAF5EC 40%, #F5EFEB 75%, #FAF5EC 100%);
+  background-attachment: fixed;
+  color: var(--color-primary);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+.glass {
+  background-color: rgba(253, 248, 237, 0.5); /* Luxurious, translucent warm cream/champagne tint */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.2); /* Elegant, thin Antique Gold border tint */
+  box-shadow: 0 20px 25px -5px rgba(197, 160, 89, 0.05), 0 8px 10px -6px rgba(197, 160, 89, 0.05);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent); 
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A059; 
+}
