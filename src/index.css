@@ -19,12 +19,18 @@
   --shadow-pastel-lavender-glow: 0 10px 30px -5px rgba(220, 198, 255, 0.5);
 }
 
-body {
+body, html {
   font-family: var(--font-sans);
   background: linear-gradient(135deg, #FFFDF9 0%, #FAF5EC 40%, #F5EFEB 75%, #FAF5EC 100%);
   background-attachment: fixed;
   color: var(--color-primary);
   overflow-x: hidden;
+  max-width: 100%;
+}
+
+#root {
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {

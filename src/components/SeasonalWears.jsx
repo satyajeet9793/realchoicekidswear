@@ -9,6 +9,7 @@ const SeasonalWears = () => {
     { title: "Kids' Raincoats", image: "/images/kids_zeel_raincoat.png" },
     { title: "Men's Jackets", image: "/images/mens_winter_jacket.png" },
     { title: "Women's Jackets", image: "/images/womens_winter_jacket.png" },
+    { title: "Kids' Jackets", image: "/images/kids_winter_jacket.png" },
   ];
 
   return (

@@ -28,7 +28,7 @@ const Collections = () => {
     ladies: [
       { id: 'all', label: 'All Items' },
       { id: 'ethnic', label: 'Ethnic Wear' },
-      { id: 'gowns', label: 'Gowns' },
+      { id: 'cotton', label: 'Cotton Sets' },
       { id: 'casuals', label: 'Casuals' }
     ]
   };
@@ -70,17 +70,17 @@ const Collections = () => {
     { id: 'g_c_5', mainCat: 'girls', subCat: 'casuals', title: 'Co-ord Sets', image: '/images/girls_casual_coord.png', categoryLabel: 'Casuals' },
 
     // === LADIES COLLECTION ===
-    // Ethnic Wear (4 types)
+    // Ethnic Wear (6 types)
     { id: 'l_e_1', mainCat: 'ladies', subCat: 'ethnic', title: 'Designer Lehenga', image: '/images/ladies_ethnic_lehenga.png', categoryLabel: 'Ethnic Wear' },
     { id: 'l_e_2', mainCat: 'ladies', subCat: 'ethnic', title: 'Plazo Set', image: '/images/ladies_ethnic_plazo.png', categoryLabel: 'Ethnic Wear' },
     { id: 'l_e_3', mainCat: 'ladies', subCat: 'ethnic', title: 'Garara', image: '/images/ladies_ethnic_garara.png', categoryLabel: 'Ethnic Wear' },
     { id: 'l_e_4', mainCat: 'ladies', subCat: 'ethnic', title: 'Indo Western', image: '/images/ladies_ethnic_indowestern.png', categoryLabel: 'Ethnic Wear' },
-    // Gowns (One piece - 5 images: 2 on short piece, 3 on long piece)
-    { id: 'l_g_1', mainCat: 'ladies', subCat: 'gowns', title: 'Short One Piece Gown', image: '/images/ladies_gown_short_1.png', categoryLabel: 'Gowns' },
-    { id: 'l_g_2', mainCat: 'ladies', subCat: 'gowns', title: 'Short One Piece Gown', image: '/images/ladies_gown_short_2.png', categoryLabel: 'Gowns' },
-    { id: 'l_g_3', mainCat: 'ladies', subCat: 'gowns', title: 'Long One Piece Gown', image: '/images/ladies_gown_long_1.png', categoryLabel: 'Gowns' },
-    { id: 'l_g_4', mainCat: 'ladies', subCat: 'gowns', title: 'Long One Piece Gown', image: '/images/ladies_gown_long_2.png', categoryLabel: 'Gowns' },
-    { id: 'l_g_5', mainCat: 'ladies', subCat: 'gowns', title: 'Long One Piece Gown', image: '/images/ladies_gown_long_3.png', categoryLabel: 'Gowns' },
+    { id: 'l_e_5', mainCat: 'ladies', subCat: 'ethnic', title: 'Short One Piece Gown', image: '/images/ladies_gown_short_1.png', categoryLabel: 'Ethnic Wear' },
+    { id: 'l_e_6', mainCat: 'ladies', subCat: 'ethnic', title: 'Long One Piece Gown', image: '/images/ladies_gown_long_1.png', categoryLabel: 'Ethnic Wear' },
+    // Cotton Sets (3 types)
+    { id: 'l_cot_1', mainCat: 'ladies', subCat: 'cotton', title: 'Jaipuri Kurti Set', image: '/images/ladies_cotton_jaipuri.jpg', categoryLabel: 'Cotton Sets' },
+    { id: 'l_cot_2', mainCat: 'ladies', subCat: 'cotton', title: 'Lucknowi Kurti Set', image: '/images/ladies_cotton_lucknowi.png', categoryLabel: 'Cotton Sets' },
+    { id: 'l_cot_3', mainCat: 'ladies', subCat: 'cotton', title: 'Printed Sets', image: '/images/ladies_cotton_printed.jpg', categoryLabel: 'Cotton Sets' },
     // Casuals (3 types)
     { id: 'l_c_1', mainCat: 'ladies', subCat: 'casuals', title: 'Designer Top', image: '/images/ladies_casual_top.png', categoryLabel: 'Casuals' },
     { id: 'l_c_2', mainCat: 'ladies', subCat: 'casuals', title: 'Fashion Jeans', image: '/images/ladies_casual_jeans.png', categoryLabel: 'Casuals' },
@@ -203,7 +203,7 @@ const Collections = () => {
               <button
                 key={tab.id}
                 onClick={() => handleMainTabChange(tab.id)}
-                className={`px-8 py-3.5 rounded-full text-sm font-semibold tracking-wider uppercase transition-all duration-300 border shadow-md ${
+                className={`px-4 py-2 md:px-8 md:py-3.5 rounded-full text-xs md:text-sm font-semibold tracking-wider uppercase transition-all duration-300 border shadow-md ${
                   isSelected
                     ? `${tab.color} ${tab.activeText} scale-105 font-bold`
                     : 'bg-white text-gray-600 border-gray-100 hover:text-primary hover:bg-gray-50'
@@ -221,7 +221,7 @@ const Collections = () => {
             <button
               key={filter.id}
               onClick={() => setActiveSubFilter(filter.id)}
-              className={`px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-widest transition-all duration-200 border ${getSubFilterStyles(filter.id)}`}
+              className={`px-3 py-1.5 md:px-5 md:py-2 rounded-full text-[10px] md:text-xs font-semibold uppercase tracking-widest transition-all duration-200 border ${getSubFilterStyles(filter.id)}`}
             >
               {filter.label}
             </button>
@@ -261,7 +261,7 @@ const Collections = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                     {/* Category Badge */}
-                    <span className={`absolute top-4 left-4 px-3.5 py-1 text-[10px] font-extrabold uppercase tracking-widest rounded-full border shadow-sm z-10 ${getBadgeStyles()}`}>
+                    <span className={`absolute top-3 left-3 md:top-4 md:left-4 px-2 py-0.5 md:px-3.5 md:py-1 text-[8px] md:text-[10px] font-extrabold uppercase tracking-widest rounded-full border shadow-sm z-10 ${getBadgeStyles()}`}>
                       {item.categoryLabel}
                     </span>
 
@@ -271,7 +271,7 @@ const Collections = () => {
                         href={whatsappUrl}
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className={`px-5 py-3 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg ${getEnquireButtonStyles()}`}
+                        className={`px-3 py-2 md:px-5 md:py-3 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest flex items-center gap-1 md:gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg ${getEnquireButtonStyles()}`}
                       >
                         <MessageCircle size={15} /> Enquire Now
                       </a>
@@ -279,7 +279,7 @@ const Collections = () => {
                   </div>
 
                   {/* Info Area */}
-                  <div className="p-5 text-center flex-grow flex flex-col justify-between">
+                  <div className="p-3 md:p-5 text-center flex-grow flex flex-col justify-between">
                     <div>
                       <span className="text-[10px] text-gray-400 font-extrabold uppercase tracking-widest block mb-1">
                         Real Choice Catalog
@@ -322,7 +322,7 @@ const Collections = () => {
 
           <div className="grid md:grid-cols-2 items-center">
             {/* Left Image Showcase */}
-            <div className="relative h-[300px] md:h-[400px] overflow-hidden group">
+            <div className="relative h-[200px] md:h-[400px] overflow-hidden group">
               <img 
                 src={activeMainTab === 'boys' ? '/images/boys_ethnic_wear.png' : activeMainTab === 'girls' ? '/images/girls_ethnic_wear.png' : '/images/ladies_ethnic_wear.png'} 
                 alt="Showcase Banner" 
@@ -333,7 +333,7 @@ const Collections = () => {
             </div>
 
             {/* Right Content */}
-            <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center relative z-10">
+            <div className="p-6 md:p-12 lg:p-16 flex flex-col justify-center relative z-10">
               <span className={`text-xs font-bold uppercase tracking-widest mb-3 flex items-center gap-2 ${
                 activeMainTab === 'boys' ? 'text-pastel-blue' : activeMainTab === 'girls' ? 'text-pastel-pink' : 'text-pastel-lavender'
               }`}>
